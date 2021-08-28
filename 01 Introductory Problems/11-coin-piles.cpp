@@ -19,7 +19,8 @@ int main()
         int q = (a + b) / 2;
         int r = (a + b) % 2;
 
-        bool res = (a <= 2 * b) && ((q - r) % 3 == 0);
+        bool res = (a <= 2 * b) && ((q - r) % 3 == 0); // !((a + b) % 3 || a * 2 < b || b * 2 < a); ??
+
         cout << (res ? "YES\n" : "NO\n");
     }
 

@@ -1,8 +1,3 @@
-# IO Redirection Macro
-redirectIO.cpp
-in.txt
-out.txt
-
 # Visual Studio Code
 *.vscode
 
