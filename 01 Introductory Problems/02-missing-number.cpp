@@ -1,14 +1,15 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+using ll = long long;
 
 int main()
 {
 
-    int n;
+    ll n;
     cin >> n;
 
-    long long sum = 0;
+    ll sum = 0;
     for (int i = 1; i < n; ++i)
     {
         int x;
@@ -16,7 +17,7 @@ int main()
         sum += x;
     }
 
-    cout << (long long)n++ * n / 2 - sum;
+    cout << n++ * n / 2 - sum;
 
     return 0;
 }
