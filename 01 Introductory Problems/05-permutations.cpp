@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 int main()
@@ -14,21 +13,17 @@ int main()
         return 0;
     }
 
-    vector<int> even(n / 2);
-    vector<int> odd(n / 2);
-
+    vector<int> res(n);
     for (int i = 0; i < n / 2; i++)
     {
-        even[i] = 2 + 2 * i;
-        odd[i] = 1 + 2 * i;
+        res[i] = 2 + 2 * i;
+        res[i + n / 2] = 1 + 2 * i;
     }
 
     if (n % 2)
-        odd.push_back(n);
+        res[n - 1] = n;
 
-    for (auto &&x : even)
-        cout << x << " ";
-    for (auto &&x : odd)
+    for (auto &&x : res)
         cout << x << " ";
 
     return 0;

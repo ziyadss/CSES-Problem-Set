@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-using ll = long long;
 
 int main()
 {
@@ -9,9 +8,10 @@ int main()
 
     while (t--)
     {
-        ll y, x, m, ans;
+        long long y, x;
         cin >> y >> x;
 
+        long long m, ans;
         m = max(y, x);
         ans = m * m - m + 1 + (m % 2 ? x - y : y - x);
 
