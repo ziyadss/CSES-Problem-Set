@@ -1,21 +1,19 @@
 #include <iostream>
-using namespace std;
 
 int main()
 {
+    uint32_t n;
+    std::cin >> n;
 
-    long long n;
-    cin >> n;
-
-    long long sum = 0;
-    for (int i = 1; i < n; ++i)
+    uint64_t sum = 0;
+    for (int i = 1; i < n; i++)
     {
-        int x;
-        cin >> x;
+        uint32_t x;
+        std::cin >> x;
         sum += x;
     }
 
-    cout << n++ * n / 2 - sum;
+    std::cout << (uint64_t)(n + 1) * n / 2 - sum;
 
     return 0;
 }

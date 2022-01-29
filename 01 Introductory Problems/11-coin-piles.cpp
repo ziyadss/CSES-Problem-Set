@@ -1,27 +1,24 @@
+#include <algorithm>
 #include <iostream>
-using namespace std;
 
 int main()
 {
-
-    int t;
-    cin >> t;
+    uint32_t t;
+    std::cin >> t;
 
     while (t--)
     {
-        int a, b;
-        cin >> a >> b;
+        uint32_t a, b;
+        std::cin >> a >> b;
 
-        int c = a;
-        a = max(c, b);
-        b = min(c, b);
+        uint32_t q = (a + b) >> 1;
+        uint32_t r = (a + b) & 1;
 
-        int q = (a + b) / 2;
-        int r = (a + b) % 2;
+        auto [mn, mx] = std::minmax(a, b);
 
-        bool res = (a <= 2 * b) && ((q - r) % 3 == 0); // !((a + b) % 3 || a * 2 < b || b * 2 < a); ??
+        bool res = (mx <= 2 * mn) && ((q - r) % 3 == 0); // !((mx + mn) % 3 || mx * 2 < mn || mn * 2 < mx); ??
 
-        cout << (res ? "YES\n" : "NO\n");
+        std::cout << (res ? "YES\n" : "NO\n");
     }
 
     return 0;

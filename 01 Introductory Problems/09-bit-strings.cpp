@@ -1,16 +1,15 @@
 #include <iostream>
-using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
+    uint32_t n;
+    std::cin >> n;
 
-    int res = 1;
+    uint32_t res = 1;
     while (n--)
-        res = 2 * res % 1000000007;
+        res = (res << 1) % 1000000007;
 
-    cout << res;
+    std::cout << res;
 
     return 0;
 }

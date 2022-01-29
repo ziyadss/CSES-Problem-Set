@@ -1,21 +1,19 @@
 #include <iostream>
-using namespace std;
 
 int main()
 {
-    int t;
-    cin >> t;
+    uint32_t t;
+    std::cin >> t;
 
     while (t--)
     {
-        long long y, x;
-        cin >> y >> x;
+        int32_t y, x;
+        std::cin >> y >> x;
 
-        long long m, ans;
-        m = max(y, x);
-        ans = m * m - m + 1 + (m % 2 ? x - y : y - x);
+        uint64_t m = std::max(y, x);
+        uint64_t ans = m * m - m + 1 + (m % 2 ? x - y : y - x);
 
-        cout << ans << '\n';
+        std::cout << ans << '\n';
     }
 
     return 0;

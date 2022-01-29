@@ -1,20 +1,19 @@
 #include <iostream>
 #include <vector>
-using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
+    uint32_t n;
+    std::cin >> n;
 
     if (n == 2 || n == 3)
     {
-        cout << "NO SOLUTION";
+        std::cout << "NO SOLUTION";
         return 0;
     }
 
-    vector<int> res(n);
-    for (int i = 0; i < n / 2; i++)
+    std::vector<uint32_t> res(n);
+    for (size_t i = 0; i < n / 2; i++)
     {
         res[i] = 2 + 2 * i;
         res[i + n / 2] = 1 + 2 * i;
@@ -23,8 +22,8 @@ int main()
     if (n % 2)
         res[n - 1] = n;
 
-    for (auto &&x : res)
-        cout << x << " ";
+    for (uint32_t &res_i : res)
+        std::cout << res_i << " ";
 
     return 0;
 }

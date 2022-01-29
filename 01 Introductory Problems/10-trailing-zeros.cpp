@@ -1,16 +1,15 @@
 #include <iostream>
-using namespace std;
 
 int main()
 {
-    int n;
-    cin >> n;
+    uint32_t n;
+    std::cin >> n;
 
-    int res = 0;
+    uint32_t res = 0;
     while (n /= 5)
         res += n;
 
-    cout << res;
+    std::cout << res;
 
     return 0;
 }
