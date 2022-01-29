@@ -1,3 +1,3 @@
 # CSES-Problem-Set
 
-Solving problems from https://cses.fi/problemset/ using C++ (usually).
+Solving problems from the [CSES Problem Set](https://cses.fi/problemset/) using C++.
