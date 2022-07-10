@@ -2,7 +2,7 @@
 
 int main()
 {
-    uint64_t n;
+    unsigned long long n;
     std::cin >> n;
 
     std::cout << n;

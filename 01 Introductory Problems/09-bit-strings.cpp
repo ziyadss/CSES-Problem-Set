@@ -2,10 +2,10 @@
 
 int main()
 {
-    uint32_t n;
+    unsigned int n;
     std::cin >> n;
 
-    uint32_t res = 1;
+    unsigned int res = 1;
     while (n--)
         res = (res << 1) % 1000000007;
 

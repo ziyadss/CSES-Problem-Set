@@ -2,7 +2,7 @@
 
 int main()
 {
-    uint32_t n;
+    unsigned int n;
     std::cin >> n;
 
     if (n % 4 && (n - 3) % 4)
@@ -12,7 +12,7 @@ int main()
         std::cout << "YES\n";
 
         std::cout << (n + 1) / 2 << '\n';
-        uint32_t a = 1, b = n - 1;
+        unsigned int a = 1, b = n - 1;
         for (size_t i = 0; i <= n / 4; i++)
             std::cout << a++ << ' ' << b-- << ' ';
 
@@ -26,7 +26,7 @@ int main()
     {
         std::cout << "YES\n";
         std::cout << n / 2 << '\n';
-        uint32_t a = 1, b = n;
+        unsigned int a = 1, b = n;
         for (size_t i = 0; i < n / 4; i++)
         {
             std::cout << a << ' ' << b << ' ';

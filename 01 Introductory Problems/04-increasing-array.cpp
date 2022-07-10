@@ -3,20 +3,18 @@
 
 int main()
 {
-    uint32_t n;
-    std::cin >> n;
+    unsigned int n, prev, curr;
+    std::cin >> n >> prev;
 
-    std::vector<uint32_t> x(n);
-    for (uint32_t &x_i : x)
-        std::cin >> x_i;
-
-    uint64_t res = 0;
-    for (size_t i = 1; i < n; i++)
-        if (x[i - 1] > x[i])
-        {
-            res += x[i - 1] - x[i];
-            x[i] = x[i - 1];
-        }
+    unsigned long long res = 0;
+    for (unsigned int i = 1; i < n; i++)
+    {
+        std::cin >> curr;
+        if (prev > curr)
+            res += prev - curr;
+        else
+            prev = curr;
+    }
 
     std::cout << res;
 

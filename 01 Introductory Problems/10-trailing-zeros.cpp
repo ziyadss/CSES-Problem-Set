@@ -2,10 +2,10 @@
 
 int main()
 {
-    uint32_t n;
+    unsigned int n;
     std::cin >> n;
 
-    uint32_t res = 0;
+    unsigned int res = 0;
     while (n /= 5)
         res += n;
 

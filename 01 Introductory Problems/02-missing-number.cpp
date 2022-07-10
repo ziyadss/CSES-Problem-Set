@@ -2,18 +2,18 @@
 
 int main()
 {
-    uint32_t n;
+    unsigned int n;
     std::cin >> n;
 
-    uint64_t sum = 0;
-    for (int i = 1; i < n; i++)
+    unsigned long long sum = 0;
+    for (unsigned int i = 1; i < n; i++)
     {
-        uint32_t x;
+        unsigned int x;
         std::cin >> x;
         sum += x;
     }
 
-    std::cout << (uint64_t)(n + 1) * n / 2 - sum;
+    std::cout << (unsigned long long)(n + 1) * n / 2 - sum;
 
     return 0;
 }

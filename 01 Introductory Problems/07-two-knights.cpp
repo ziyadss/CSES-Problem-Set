@@ -2,11 +2,11 @@
 
 int main()
 {
-    uint32_t n;
+    unsigned int n;
     std::cin >> n;
 
-    for (uint32_t i = 1; i <= n; i++)
-        std::cout << (uint64_t)(i - 1) * (i + 4) * ((i - 3) * i + 4) / 2 << '\n';
+    for (unsigned int i = 1; i <= n; i++)
+        std::cout << (unsigned long long)(i - 1) * (i + 4) * ((i - 3) * i + 4) / 2 << '\n';
 
     return 0;
 }

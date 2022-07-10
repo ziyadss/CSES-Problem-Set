@@ -3,16 +3,16 @@
 
 int main()
 {
-    uint32_t t;
+    unsigned int t;
     std::cin >> t;
 
     while (t--)
     {
-        uint32_t a, b;
+        unsigned int a, b;
         std::cin >> a >> b;
 
-        uint32_t q = (a + b) >> 1;
-        uint32_t r = (a + b) & 1;
+        unsigned int q = (a + b) >> 1;
+        unsigned int r = (a + b) & 1;
 
         auto [mn, mx] = std::minmax(a, b);
 

@@ -3,7 +3,7 @@
 
 int main()
 {
-    uint32_t n;
+    unsigned int n;
     std::cin >> n;
 
     if (n == 2 || n == 3)
@@ -12,8 +12,8 @@ int main()
         return 0;
     }
 
-    std::vector<uint32_t> res(n);
-    for (size_t i = 0; i < n / 2; i++)
+    std::vector<unsigned int> res(n);
+    for (unsigned int i = 0; i < n / 2; i++)
     {
         res[i] = 2 + 2 * i;
         res[i + n / 2] = 1 + 2 * i;
@@ -22,7 +22,7 @@ int main()
     if (n % 2)
         res[n - 1] = n;
 
-    for (uint32_t &res_i : res)
+    for (unsigned int res_i : res)
         std::cout << res_i << " ";
 
     return 0;

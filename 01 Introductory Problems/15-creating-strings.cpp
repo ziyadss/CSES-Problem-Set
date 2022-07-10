@@ -9,7 +9,7 @@ int main()
     std::sort(s.begin(), s.end());
 
     std::string res;
-    uint32_t count = 0;
+    unsigned int count = 0;
     do
     {
         res += ('\n' + s);

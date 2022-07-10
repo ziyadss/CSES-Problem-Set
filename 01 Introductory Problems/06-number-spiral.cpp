@@ -2,16 +2,16 @@
 
 int main()
 {
-    uint32_t t;
+    unsigned int t;
     std::cin >> t;
 
     while (t--)
     {
-        int32_t y, x;
+        int y, x;
         std::cin >> y >> x;
 
-        uint64_t m = std::max(y, x);
-        uint64_t ans = m * m - m + 1 + (m % 2 ? x - y : y - x);
+        unsigned long long m = std::max(y, x);
+        unsigned long long ans = m * m - m + 1 + (m % 2 ? x - y : y - x);
 
         std::cout << ans << '\n';
     }

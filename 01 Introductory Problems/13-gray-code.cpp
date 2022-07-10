@@ -2,15 +2,15 @@
 
 int main()
 {
-    uint32_t n;
+    unsigned int n;
     std::cin >> n;
 
-    uint32_t count = 1 << n;
+    unsigned int count = 1 << n;
     char *bitStrings = new char[count * (n + 1) + 1];
 
     for (size_t i = 0; i < count; i++)
     {
-        uint32_t num = i / 2 ^ i;
+        unsigned int num = i / 2 ^ i;
 
         for (size_t j = 0; j < n; j++)
         {
